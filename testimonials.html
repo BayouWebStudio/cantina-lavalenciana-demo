@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opiniones &#x2014; Cantina La Valenciana | Lo Que Dicen Nuestros Clientes</title>
-  <meta name="description" content="Opiniones y reseñas de Cantina La Valenciana en Narvarte CDMX. La cantina favorita de los chilangos.">
-  <meta name="keywords" content="opiniones Cantina La Valenciana, reseñas cantina Narvarte, reviews restaurante CDMX">
+  <title>Opiniones &#x2014; Cantina La Valenciana | Narvarte CDMX</title>
+  <meta name="description" content="Opiniones y testimonios de clientes de Cantina La Valenciana en Narvarte Oriente, CDMX.">
   <link rel="canonical" href="https://bayouwebstudio.github.io/cantina-lavalenciana-demo/testimonials.html">
   <meta property="og:title" content="Opiniones &#x2014; Cantina La Valenciana">
-  <meta property="og:description" content="Lo que dicen nuestros clientes sobre Cantina La Valenciana, Narvarte CDMX.">
   <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/cantina-lavalenciana-demo/main/img/1.jpg">
   <meta property="og:url" content="https://bayouwebstudio.github.io/cantina-lavalenciana-demo/testimonials.html">
   <meta property="og:type" content="website">
@@ -16,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
+    
     :root {
       --black: #0a0a0a;
       --charcoal: #141414;
@@ -26,60 +25,135 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--black); color: var(--white); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; background: rgba(10,5,5,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-    .nav-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-weight: 400; letter-spacing: 0.1em; color: var(--white); text-decoration: none; }
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      background: rgba(10,5,5,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      text-decoration: none;
+    }
     .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
-    .nav-links a { color: var(--dim); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-links a {
+      color: var(--dim);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
     .nav-links a:hover, .nav-links a.active { color: var(--white); }
+    .lang-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--dim);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
     .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-    .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99; background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border); }
+    .mobile-menu {
+      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
+    }
     .mobile-menu.open { display: block; }
     .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    .book-float { position: fixed; bottom: 32px; right: 32px; z-index: 200; background: var(--gold); color: #000; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 14px 22px; border-radius: 2px; box-shadow: 0 4px 24px rgba(201,168,76,0.35); transition: transform 0.2s, box-shadow 0.2s; }
+    /* FLOATING BOOK */
+    .book-float {
+      position: fixed; bottom: 32px; right: 32px; z-index: 200;
+      background: var(--gold); color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+      text-decoration: none; padding: 14px 22px; border-radius: 2px;
+      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
     .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
+    /* FADE-UP ANIMATIONS */
     .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
-    footer { background: var(--charcoal); padding: 48px 72px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    /* FOOTER */
+    footer {
+      background: var(--charcoal); padding: 48px 72px;
+      border-top: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center;
+    }
     .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
     .footer-links { display: flex; gap: 24px; }
     .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
     .footer-links a:hover { color: var(--white); }
     .footer-copy { color: var(--dim); font-size: 0.72rem; }
+    /* SHARED */
     .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 400; line-height: 1.1; margin-bottom: 24px; }
-    .btn-gold { display: inline-block; background: var(--gold); color: #000; text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 40px; transition: opacity 0.2s; }
+    h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
+    }
+    .btn-gold {
+      display: inline-block; background: var(--gold); color: #000;
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 16px 40px;
+      transition: opacity 0.2s;
+    }
     .btn-gold:hover { opacity: 0.88; }
+    .btn-outline {
+      display: inline-block; border: 1px solid var(--border); color: var(--white);
+      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 14px 36px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    /* MOBILE */
     @media (max-width: 900px) {
       nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
       footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
     }
-    @media (max-width: 600px) { footer { padding: 32px 20px; } }
-
+    @media (max-width: 600px) {
+      footer { padding: 32px 20px; }
+    }
+  
     .page-hero { padding: 140px 72px 64px; background: var(--charcoal); border-bottom: 1px solid var(--border); }
     .page-eyebrow { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
     h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 300; line-height: 1; }
-    .testimonials-body { padding: 96px 72px; max-width: 1100px; margin: 0 auto; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 72px; }
-    .t-card { border: 1px solid var(--border); padding: 40px; transition: border-color 0.3s; }
-    .t-card:hover { border-color: var(--gold); }
-    .t-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
-    .t-card p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; font-style: italic; color: var(--dim); margin-bottom: 20px; line-height: 1.7; }
-    .t-author { font-size: 0.72rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; }
-    .t-author span { color: var(--gold); }
-    .featured-card { border: 1px solid var(--gold); padding: 48px; margin-bottom: 48px; text-align: center; }
-    .featured-card p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.5rem; font-style: italic; color: var(--white); line-height: 1.6; margin-bottom: 24px; }
-    .featured-card small { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.1em; }
-    .share-section { padding-top: 48px; border-top: 1px solid var(--border); }
+    .testimonials-body { padding: 96px 72px; max-width: 900px; margin: 0 auto; }
+    .testimonial-card { border: 1px solid var(--border); padding: 48px; margin-bottom: 24px; }
+    .testimonial-card blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.3rem; font-style: italic; color: var(--white); margin-bottom: 20px; line-height: 1.6; }
+    .testimonial-card .author { color: var(--gold); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .testimonial-card .stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; }
+    .placeholder-block { border: 1px solid var(--border); padding: 60px; text-align: center; margin-bottom: 72px; }
+    .placeholder-block p { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.4rem; font-style: italic; color: var(--dim); margin-bottom: 8px; }
+    .placeholder-block small { color: var(--dim); font-size: 0.75rem; letter-spacing: 0.08em; }
     .share-section h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 2rem; font-weight: 300; margin-bottom: 12px; }
     .share-section > p { color: var(--dim); margin-bottom: 40px; font-size: 0.92rem; }
     .form-group { margin-bottom: 24px; }
     .form-group label { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; }
-    .form-group input, .form-group textarea, .form-group select {
+    .form-group input, .form-group textarea {
       width: 100%; background: var(--charcoal); border: 1px solid var(--border); color: var(--white);
       font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 300; padding: 14px 16px;
       outline: none; transition: border-color 0.2s;
@@ -88,17 +162,16 @@
     .form-group textarea { resize: vertical; min-height: 120px; }
     .btn-submit { background: var(--gold); color: #000; border: none; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 16px 40px; font-weight: 500; transition: opacity 0.2s; }
     .btn-submit:hover { opacity: 0.88; }
-    #t-success { display:none; color:var(--gold); margin-top:16px; font-size:0.88rem; }
     @media (max-width: 900px) {
       .page-hero { padding: 120px 24px 48px; }
       .testimonials-body { padding: 60px 24px; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .featured-card { padding: 36px 24px; }
+      .placeholder-block { padding: 40px 24px; }
+      .testimonial-card { padding: 32px 24px; }
     }
   </style>
 </head>
 <body>
-
+  
   <nav>
     <a href="./index.html" class="nav-logo">Cantina La Valenciana</a>
     <ul class="nav-links">
@@ -108,7 +181,7 @@
       <li><a href="./booking.html">Reservaciones</a></li>
       <li><a href="./testimonials.html" class="active">Opiniones</a></li>
     </ul>
-    <button class="hamburger" aria-label="Men&#xfa;" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
+    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -119,80 +192,76 @@
     <a href="./booking.html">Reservaciones</a>
     <a href="./testimonials.html">Opiniones</a>
   </div>
-  <a href="./booking.html" class="book-float">Reservar Mesa</a>
+  <a href="./booking.html" class="book-float">Reservar</a>
 
   <section class="page-hero">
-    <p class="page-eyebrow fade-up">Opiniones de Clientes</p>
-    <h1 class="fade-up">Lo Que Dicen &#x1f4ac;</h1>
-    <p style="color:var(--dim);margin-top:16px;font-size:0.95rem;max-width:560px;" class="fade-up">La experiencia Valenciana, en palabras de quienes la viven.</p>
+    <p class="page-eyebrow fade-up">Experiencias de Nuestros Clientes</p>
+    <h1 class="fade-up">Lo que dicen nuestros clientes</h1>
   </section>
 
   <div class="testimonials-body">
 
-    <!-- FEATURED -->
-    <div class="featured-card fade-up">
-      <div style="color:var(--gold);font-size:1rem;letter-spacing:3px;margin-bottom:16px;">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-      <p>&#x201c;Cantina La Valenciana es de esos lugares que se te quedan grabados. El ambiente es &#xfa;nico, la comida es honesta y el servicio te hace sentir como en casa. El molcajete es simplemente legendario.&#x201d;</p>
-      <small>&#x2014; Rodrigo V. &mdash; <span style="color:var(--gold);">Google Reviews &middot; 5 estrellas</span></small>
+    <!-- Sample testimonials -->
+    <div class="testimonial-card fade-up">
+      <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <blockquote>&ldquo;El molcajete de La Valenciana es simplemente el mejor de la CDMX. Un lugar con historia, ambiente incre&#xed;ble y meseros de primera. Ya vine tres veces este mes.&rdquo;</blockquote>
+      <div class="author">&#x2014; Mar&#xed;a G., Narvarte</div>
     </div>
 
-    <!-- GRID DE TESTIMONIOS -->
-    <div class="testimonials-grid">
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;El molcajete es una obra maestra. El ambiente te transporta a la cantina de toda la vida. Imposible no quedarse otra ronda.&#x201d;</p>
-        <div class="t-author">&#x2014; Mar&#xed;a G. &mdash; <span>Google Reviews</span></div>
-      </div>
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;Ven&#xed; por el chile en nogada y me qued&#xe9; por los c&#xf3;cteles. El sal&#xf3;n del domin&#xf3; es un viaje al pasado. &#xa1;Regreso seguro!&#x201d;</p>
-        <div class="t-author">&#x2014; Carlos M. &mdash; <span>Instagram</span></div>
-      </div>
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;Vine porque vi la cantina en &#x27;Soy tu Fan&#x27; y no me decepcion&#xf3; para nada. Es exactamente como en la serie: llena de vida, con personalidad y una comida brutal.&#x201d;</p>
-        <div class="t-author">&#x2014; Laura P. &mdash; <span>Google Reviews</span></div>
-      </div>
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;La Valenciana tiene algo especial. La barra gigante, el domin&#xf3; entre mesas, los mezcales&#x2026; cada visita es diferente. Mi cantina favorita en Narvarte sin duda.&#x201d;</p>
-        <div class="t-author">&#x2014; Diego R. &mdash; <span>Instagram @diegoramos_cdmx</span></div>
-      </div>
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;Organizamos el cumplea&#xf1;os de mi pap&#xe1; aqu&#xed; y fue perfecto. El equipo nos recibi&#xf3; de maravilla, la comida estuvo incre&#xed;ble y el ambiente hizo que nadie se quisiera ir.&#x201d;</p>
-        <div class="t-author">&#x2014; Ale S. &mdash; <span>Google Reviews</span></div>
-      </div>
-      <div class="t-card fade-up">
-        <div class="t-stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
-        <p>&#x201c;Los antojitos son impecables y los c&#xf3;cteles no dan pena. Me encanta que puedes venir a comer o quedarte toda la tarde. Eso es lo que hace grande a una cantina.&#x201d;</p>
-        <div class="t-author">&#x2014; Paulina T. &mdash; <span>TripAdvisor</span></div>
-      </div>
+    <div class="testimonial-card fade-up">
+      <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <blockquote>&ldquo;Vine a La Valenciana despu&#xe9;s de verla en Soy tu Fan y no me decepcion&#xf3;. El ambiente cantinero es aut&#xe9;ntico, la comida deliciosa y el chile en nogada es de otro nivel.&rdquo;</blockquote>
+      <div class="author">&#x2014; Carlos M., Condesa</div>
     </div>
 
-    <!-- SHARE FORM -->
+    <div class="testimonial-card fade-up">
+      <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <blockquote>&ldquo;Celebramos el cumplea&#xf1;os de mi pap&#xe1; aqu&#xed; y fue perfecto. Los dos salones son espaciosos, el servicio excelente y los c&#xf3;cteles riq&#xed;simos. Definitivamente regresamos.&rdquo;</blockquote>
+      <div class="author">&#x2014; Sofía R., Del Valle</div>
+    </div>
+
+    <div class="testimonial-card fade-up">
+      <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+      <blockquote>&ldquo;Una cantina con alma. Desde que entras sientes la historia del lugar. El domin&#xf3; en las tardes es un cl&#xe1;sico. La barra es enorme y siempre hay algo rico que tomar.&rdquo;</blockquote>
+      <div class="author">&#x2014; Roberto T., Roma Norte</div>
+    </div>
+
     <div class="share-section fade-up">
-      <h2>Comparte Tu Experiencia &#x1f37b;</h2>
-      <p>&#xbf;Visitaste Cantina La Valenciana? Nos encanta escuchar tu historia.</p>
+      <h2>Comparte tu Experiencia</h2>
+      <p>&#xbf;Visitaste Cantina La Valenciana? Nos encantar&#xed;a escuchar tu historia gastron&#xf3;mica.</p>
       <form onsubmit="submitTestimonial(event)">
         <div class="form-group">
-          <label>Tu nombre</label>
+          <label>Tu Nombre</label>
           <input type="text" id="t-name" required placeholder="Tu nombre">
         </div>
         <div class="form-group">
-          <label>Tu experiencia</label>
-          <textarea id="t-body" rows="5" required placeholder="Cu&#xe9;ntanos qu&#xe9; fue lo que m&#xe1;s te gust&#xf3;..."></textarea>
+          <label>Tu Experiencia</label>
+          <textarea id="t-body" rows="5" required placeholder="Cu&#xe9;ntanos sobre tu visita, qu&#xe9; comiste, qu&#xe9; tomaste..."></textarea>
         </div>
         <div class="form-group">
-          <label>Tu Instagram (opcional)</label>
-          <input type="text" id="t-ig" placeholder="@handle">
+          <label>Instagram (opcional)</label>
+          <input type="text" id="t-ig" placeholder="@tu_handle">
         </div>
         <button type="submit" class="btn-submit">Enviar Opini&#xf3;n</button>
-        <p id="t-success">&#x2714; &#xa1;Gracias! Tu opini&#xf3;n fue enviada. &#x1f37b;</p>
+        <p id="t-success" style="display:none;color:var(--gold);margin-top:16px;">&#xa1;Gracias! Tu opini&#xf3;n ha sido enviada.</p>
       </form>
+      <script>
+      function submitTestimonial(e) {
+        e.preventDefault();
+        const name = document.getElementById('t-name').value;
+        const body = document.getElementById('t-body').value;
+        const ig = document.getElementById('t-ig').value;
+        const to = "opiniones@cantina-lavalenciana.com";
+        const sub = encodeURIComponent("Nueva Opini\u00f3n - " + name);
+        const msg = encodeURIComponent("Nombre: " + name + "\nInstagram: " + ig + "\n\n" + body);
+        window.location.href = "mailto:" + to + "?subject=" + sub + "&body=" + msg;
+        document.getElementById('t-success').style.display = 'block';
+      }
+      </script>
     </div>
   </div>
 
+  
   <footer>
     <div class="footer-logo">Cantina La Valenciana</div>
     <div class="footer-links">
@@ -202,21 +271,11 @@
       <a href="./booking.html">Reservaciones</a>
       <a href="https://www.instagram.com/cantina_lavalenciana" target="_blank" rel="noopener">Instagram</a>
     </div>
-    <div class="footer-copy">&copy; 2026 Cantina La Valenciana &mdash; Narvarte, CDMX</div>
+    <div class="footer-copy">&#xa9; 2026 Cantina La Valenciana</div>
   </footer>
-
+  
   <script>
-    function submitTestimonial(e) {
-      e.preventDefault();
-      const name = document.getElementById('t-name').value;
-      const body = document.getElementById('t-body').value;
-      const ig = document.getElementById('t-ig').value;
-      const sub = encodeURIComponent("Nueva opinión - " + name);
-      const msg = encodeURIComponent("Nombre: " + name + "\nInstagram: " + ig + "\n\n" + body);
-      window.location.href = "mailto:info@cantina-lavalenciana.com?subject=" + sub + "&body=" + msg;
-      document.getElementById('t-success').style.display = 'block';
-    }
-
+    // Fade-up on scroll
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.12 });
