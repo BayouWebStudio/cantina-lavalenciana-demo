@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre M&#xed; &#x2014; Cantina La Valenciana | Tattoo Artist este link</title>
-  <meta name="description" content="Soy Cantina La Valenciana, artista de tatuaje en este link.">
+  <title>Nuestra Historia &mdash; Cantina La Valenciana | Narvarte CDMX</title>
+  <meta name="description" content="Conoce la historia de Cantina La Valenciana, cantina tradicional mexicana en Narvarte Oriente, CDMX. Décadas de sabor, ambiente y cultura cantinera.">
+  <meta name="keywords" content="Cantina La Valenciana historia, cantina mexicana Narvarte, restaurante Benito Juárez CDMX">
   <link rel="canonical" href="https://bayouwebstudio.github.io/cantina-lavalenciana-demo/about.html">
-  <meta property="og:title" content="Sobre M&#xed; &#x2014; Cantina La Valenciana">
-  <meta property="og:description" content="Soy Cantina La Valenciana, artista de tatuaje en este link.">
+  <meta property="og:title" content="Nuestra Historia &mdash; Cantina La Valenciana">
+  <meta property="og:description" content="Una cantina tradicional con décadas de historia en el corazón de Narvarte, CDMX.">
   <meta property="og:image" content="https://raw.githubusercontent.com/BayouWebStudio/cantina-lavalenciana-demo/main/img/2.jpg">
   <meta property="og:url" content="https://bayouwebstudio.github.io/cantina-lavalenciana-demo/about.html">
   <meta property="og:type" content="website">
@@ -15,259 +16,144 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    
-    :root {
-      --black: #0a0a0a;
-      --charcoal: #141414;
-      --gold: #C9A84C;
-      --white: #f5f5f0;
-      --dim: #888;
-      --border: rgba(255,255,255,0.07);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 48px;
-      background: rgba(10,5,5,0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      letter-spacing: 0.1em;
-      color: var(--white);
-      text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
-    .nav-links a {
-      color: var(--dim);
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--white); }
-    .lang-toggle {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--dim);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .lang-toggle:hover { border-color: var(--gold); color: var(--gold); }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 1px; background: var(--white); margin: 5px 0; transition: all 0.3s; }
-    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
-    .mobile-menu {
-      display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
-      background: var(--charcoal); padding: 24px 48px; border-bottom: 1px solid var(--border);
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu a { display: block; color: var(--white); text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid var(--border); }
-    /* FLOATING BOOK */
-    .book-float {
-      position: fixed; bottom: 32px; right: 32px; z-index: 200;
-      background: var(--gold); color: #000;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
-      text-decoration: none; padding: 14px 22px; border-radius: 2px;
-      box-shadow: 0 4px 24px rgba(201,168,76,0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .book-float:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(201,168,76,0.5); }
-    /* FADE-UP ANIMATIONS */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
-    /* FOOTER */
-    footer {
-      background: var(--charcoal); padding: 48px 72px;
-      border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .footer-logo { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.1rem; color: var(--dim); }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a { color: var(--dim); text-decoration: none; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-copy { color: var(--dim); font-size: 0.72rem; }
-    /* SHARED */
-    .section-label { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    h2 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 400; line-height: 1.1; margin-bottom: 24px;
-    }
-    .btn-gold {
-      display: inline-block; background: var(--gold); color: #000;
-      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; padding: 16px 40px;
-      transition: opacity 0.2s;
-    }
-    .btn-gold:hover { opacity: 0.88; }
-    .btn-outline {
-      display: inline-block; border: 1px solid var(--border); color: var(--white);
-      text-decoration: none; font-size: 0.72rem; letter-spacing: 0.18em;
-      text-transform: uppercase; padding: 14px 36px;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
-    /* MOBILE */
-    @media (max-width: 900px) {
-      nav { padding: 18px 24px; } .nav-links { display: none; } .hamburger { display: block; }
-      footer { flex-direction: column; gap: 24px; padding: 40px 24px; text-align: center; }
-    }
-    @media (max-width: 600px) {
-      footer { padding: 32px 20px; }
-    }
-  
-    .page-hero { padding: 160px 72px 80px; background: var(--charcoal); border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
-    .page-hero-bg { position: absolute; inset: 0; background-image: url('img/2.jpg'); background-size: cover; background-position: center; filter: brightness(0.25); }
-    .page-hero-content { position: relative; z-index: 2; }
-    .page-eyebrow { font-size: 0.68rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(3rem, 6vw, 5rem); font-weight: 300; line-height: 1; }
-    .about-body { padding: 96px 72px; max-width: 1200px; margin: 0 auto; }
-    .about-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 80px; align-items: start; }
-    .bio-section p { color: var(--dim); line-height: 1.9; margin-bottom: 28px; font-size: 1rem; }
-    .stats-section { position: sticky; top: 100px; }
-    .stat-card { border: 1px solid var(--border); padding: 32px; margin-bottom: 16px; text-align: center; }
-    .stat-big { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 3rem; font-weight: 300; color: var(--gold); }
-    .stat-small { font-size: 0.72rem; color: var(--dim); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; }
-    .specialty-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
-    .tag { border: 1px solid var(--border); color: var(--dim); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 16px; }
-    @media (max-width: 900px) {
-      .page-hero { padding: 120px 24px 60px; }
-      .about-body { padding: 60px 24px; }
-      .about-layout { grid-template-columns: 1fr; gap: 48px; }
-      .stats-section { position: static; }
-    }
+    :root { --black:#0a0a0a; --charcoal:#141414; --gold:#C9A84C; --white:#f5f5f0; --dim:#888; --border:rgba(255,255,255,0.07); }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { background:var(--black); color:var(--white); font-family:'Inter',sans-serif; font-weight:300; line-height:1.6; overflow-x:hidden; }
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:rgba(10,5,5,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    .nav-logo { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.3rem; font-weight:400; letter-spacing:0.1em; color:var(--white); text-decoration:none; }
+    .nav-links { display:flex; gap:32px; list-style:none; align-items:center; }
+    .nav-links a { color:var(--dim); text-decoration:none; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; transition:color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--white); }
+    .hamburger { display:none; background:none; border:none; cursor:pointer; padding:4px; }
+    .hamburger span { display:block; width:22px; height:1px; background:var(--white); margin:5px 0; transition:all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+    .hamburger.open span:nth-child(2) { opacity:0; }
+    .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4px); }
+    .mobile-menu { display:none; position:fixed; top:65px; left:0; right:0; z-index:99; background:var(--charcoal); padding:24px 48px; border-bottom:1px solid var(--border); }
+    .mobile-menu.open { display:block; }
+    .mobile-menu a { display:block; color:var(--white); text-decoration:none; font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; padding:12px 0; border-bottom:1px solid var(--border); }
+    .book-float { position:fixed; bottom:32px; right:32px; z-index:200; background:var(--gold); color:#000; font-family:'Inter',sans-serif; font-size:0.72rem; font-weight:500; letter-spacing:0.14em; text-transform:uppercase; text-decoration:none; padding:14px 22px; border-radius:2px; box-shadow:0 4px 24px rgba(201,168,76,0.35); transition:transform 0.2s,box-shadow 0.2s; }
+    .book-float:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(201,168,76,0.5); }
+    .fade-up { opacity:0; transform:translateY(28px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    footer { background:var(--charcoal); padding:48px 72px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    .footer-logo { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.1rem; color:var(--dim); }
+    .footer-links { display:flex; gap:24px; }
+    .footer-links a { color:var(--dim); text-decoration:none; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; transition:color 0.2s; }
+    .footer-links a:hover { color:var(--white); }
+    .footer-copy { color:var(--dim); font-size:0.72rem; }
+    h2 { font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(2rem,4vw,3.2rem); font-weight:400; line-height:1.1; margin-bottom:24px; }
+    .btn-gold { display:inline-block; background:var(--gold); color:#000; text-decoration:none; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; padding:16px 40px; transition:opacity 0.2s; }
+    .btn-gold:hover { opacity:0.88; }
+    @media (max-width:900px) { nav{padding:18px 24px;} .nav-links{display:none;} .hamburger{display:block;} footer{flex-direction:column;gap:24px;padding:40px 24px;text-align:center;} }
+    @media (max-width:600px) { footer{padding:32px 20px;} }
+    .page-hero { padding:160px 72px 80px; background:var(--charcoal); border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+    .page-hero-bg { position:absolute; inset:0; background-image:url('img/2.jpg'); background-size:cover; background-position:center; filter:brightness(0.22); }
+    .page-hero-content { position:relative; z-index:2; }
+    .page-eyebrow { font-size:0.68rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    h1 { font-family:'Cormorant Garamond',Georgia,serif; font-size:clamp(3rem,6vw,5rem); font-weight:300; line-height:1; }
+    .about-body { padding:96px 72px; max-width:1200px; margin:0 auto; }
+    .about-layout { display:grid; grid-template-columns:2fr 1fr; gap:80px; align-items:start; }
+    .bio-section p { color:var(--dim); line-height:1.9; margin-bottom:28px; font-size:1rem; }
+    .bio-section h3 { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:400; margin-bottom:16px; margin-top:40px; }
+    .stats-section { position:sticky; top:100px; }
+    .stat-card { border:1px solid var(--border); padding:32px; margin-bottom:16px; text-align:center; }
+    .stat-big { font-family:'Cormorant Garamond',Georgia,serif; font-size:3rem; font-weight:300; color:var(--gold); }
+    .stat-small { font-size:0.72rem; color:var(--dim); letter-spacing:0.12em; text-transform:uppercase; margin-top:8px; }
+    .specialty-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:32px; }
+    .tag { border:1px solid var(--border); color:var(--dim); font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; padding:8px 16px; }
+    .salones-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:40px; }
+    .salon-card { border:1px solid var(--border); padding:32px; }
+    .salon-card h4 { font-family:'Cormorant Garamond',Georgia,serif; font-size:1.3rem; font-weight:400; color:var(--gold); margin-bottom:12px; }
+    .salon-card p { color:var(--dim); font-size:0.88rem; line-height:1.7; }
+    @media (max-width:900px) { .page-hero{padding:120px 24px 60px;} .about-body{padding:60px 24px;} .about-layout{grid-template-columns:1fr;gap:48px;} .stats-section{position:static;} .salones-grid{grid-template-columns:1fr;} }
   </style>
 </head>
 <body>
-  
   <nav>
     <a href="./index.html" class="nav-logo">Cantina La Valenciana</a>
     <ul class="nav-links">
-      <li><a href="./index.html" 
-        data-en="Inicio" data-es="Inicio">Inicio</a></li>
-      <li><a href="./about.html" class="active"
-        data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a></li>
-      <li><a href="./tattoos.html" 
-        data-en="Tattoos" data-es="Tatuajes">Tatuajes</a></li>
-      <li><a href="./booking.html" 
-        data-en="Booking" data-es="Reservaciones">Reservaciones</a></li>
-      <li><a href="./testimonials.html" 
-        data-en="Reviews" data-es="Testimonios">Testimonios</a></li>
-      <li><button class="lang-toggle" onclick="toggleLang()">EN</button></li>
+      <li><a href="./index.html">Inicio</a></li>
+      <li><a href="./about.html" class="active">Nuestra Historia</a></li>
+      <li><a href="./tattoos.html">Men&#xfa;</a></li>
+      <li><a href="./booking.html">Reservaciones</a></li>
+      <li><a href="./testimonials.html">Opiniones</a></li>
     </ul>
-    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.mobile-menu').classList.toggle('open')"><span></span><span></span><span></span></button>
   </nav>
   <div class="mobile-menu">
-    <a href="./index.html" data-en="Home" data-es="Inicio">Inicio</a>
-    <a href="./about.html" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</a>
-    <a href="./tattoos.html" data-en="Tattoos" data-es="Tatuajes">Tatuajes</a>
-    <a href="./booking.html" data-en="Booking" data-es="Reservaciones">Reservaciones</a>
-    <a href="./testimonials.html" data-en="Reviews" data-es="Testimonios">Testimonios</a>
+    <a href="./index.html">Inicio</a>
+    <a href="./about.html">Nuestra Historia</a>
+    <a href="./tattoos.html">Men&#xfa;</a>
+    <a href="./booking.html">Reservaciones</a>
+    <a href="./testimonials.html">Opiniones</a>
   </div>
-  <a href="./booking.html" class="book-float">Reserva</a>
+  <a href="./booking.html" class="book-float">Reservar Mesa</a>
 
   <section class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="page-hero-content">
-      <p class="page-eyebrow fade-up" data-en="About" data-es="Sobre M&#xed;">Sobre M&#xed;</p>
+      <p class="page-eyebrow fade-up">Nuestra Historia</p>
       <h1 class="fade-up">Cantina La Valenciana</h1>
+      <p style="color:var(--dim);margin-top:16px;font-size:0.95rem;max-width:560px;position:relative;z-index:2;" class="fade-up">Un emblema de la Ciudad de M&#xe9;xico &mdash; Narvarte Oriente, Benito Ju&#xe1;rez</p>
     </div>
   </section>
 
   <div class="about-body">
     <div class="about-layout">
       <div class="bio-section">
-        <p class="fade-up">Soy Cantina La Valenciana, artista de tatuaje en este link.</p>
-        <p class="fade-up">Mi trabajo refleja una pasi&#xf3;n profunda por el arte y la piel como lienzo.</p>
-        <p class="fade-up">Cada pieza es &#xfa;nica, creada con intenci&#xf3;n y cuidado.</p>
-        <p class="fade-up">Cont&#xe1;ctame para comenzar tu proyecto.</p>
-        <div class="specialty-tags fade-up">
-          <span class="tag">Arte del Tatuaje</span>
-          <span class="tag">este link</span>
-          <span class="tag" data-en="Tattoo Artist" data-es="Artista de Tatuaje">Artista de Tatuaje</span>
-          <span class="tag" data-en="Custom Work" data-es="Trabajo Personalizado">Trabajo Personalizado</span>
+        <p class="fade-up">Cantina La Valenciana naci&#xf3; con una sola misi&#xf3;n: preservar el esp&#xed;ritu de la cantina mexicana de toda la vida. Esa donde el tiempo se detiene, los sabores son honestos y cada mesa esconde una historia.</p>
+        <p class="fade-up">Ubicada en Av. Universidad 48, en el coraz&#xf3;n de Narvarte Oriente, La Valenciana se ha convertido en un punto de encuentro para generaciones de capitalinos que buscan algo m&#xe1;s que comida: buscan experiencia, tradici&#xf3;n y el calor de lo genuino. &#x1f1f2;&#x1f1fd;</p>
+        <p class="fade-up">Su fama trascendi&#xf3; m&#xe1;s all&#xe1; de la colonia cuando apareci&#xf3; en la querida serie mexicana <strong style="color:var(--white);">"Soy tu Fan"</strong>, convirti&#xe9;ndose en escenario de historias de amor y amistad que resonaron con toda una generaci&#xf3;n. &#x1f4fa;</p>
+        <h3 class="fade-up">Dos Salones, Un Solo Esp&#xed;ritu</h3>
+        <div class="salones-grid">
+          <div class="salon-card fade-up">
+            <h4>&#x1f37b; Sal&#xf3;n Principal</h4>
+            <p>De alta afluencia y ambiente festivo. El lugar perfecto para celebrar con los tuyos, donde la m&#xfa;sica y el sabor se funden.</p>
+          </div>
+          <div class="salon-card fade-up">
+            <h4>&#x1f3b2; Sal&#xf3;n Cantinero</h4>
+            <p>El rinc&#xf3;n que te atrapa. Domin&#xf3;, barra gigante y el ambiente relajado de cantina cl&#xe1;sica. Aqu&#xed; las horas pasan sin que te des cuenta.</p>
+          </div>
         </div>
-        <a href="./booking.html" class="btn-gold" style="margin-top:48px;" data-en="Reservar Sesi&#xf3;n" data-es="Reservar Sesi&#xf3;n">Reservar Sesi&#xf3;n</a>
+        <h3 class="fade-up">Especialidades de la Casa &#x1f37d;&#xfe0f;</h3>
+        <p class="fade-up">Nuestros molcajetes son legendarios &mdash; preparados en piedra volc&#xe1;nica con ingredientes frescos y recetas que no cambian porque no necesitan cambiar. El chile en nogada de temporada es motivo de peregrinaci&#xf3;n. Los antojitos mexicanos son el abrazo de bienvenida. Y los c&#xf3;cteles, el broche perfecto.</p>
+        <div class="specialty-tags fade-up">
+          <span class="tag">&#x1f944; Molcajetes</span>
+          <span class="tag">&#x1f33f; Chile en Nogada</span>
+          <span class="tag">&#x1f35e; Antojitos</span>
+          <span class="tag">&#x1f943; C&#xf3;cteles</span>
+          <span class="tag">&#x1f3b2; Domin&#xf3;</span>
+          <span class="tag">&#x1f4fa; Soy tu Fan</span>
+        </div>
+        <a href="./booking.html" class="btn-gold" style="margin-top:48px;">Reservar Mesa</a>
       </div>
       <div class="stats-section">
-        <div class="stat-card fade-up">
-          <div class="stat-big">2+</div>
-          <div class="stat-small" data-en="Years of Experience" data-es="A&#xf1;os de Experiencia">A&#xf1;os de Experiencia</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">3.4K</div>
-          <div class="stat-small" data-en="Instagram Followers" data-es="Seguidores en Instagram">Seguidores en Instagram</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">Arte</div>
-          <div class="stat-small" data-en="Primary Style" data-es="Estilo Principal">Estilo Principal</div>
-        </div>
-        <div class="stat-card fade-up">
-          <div class="stat-big">este link</div>
-          <div class="stat-small" data-en="Base City" data-es="Ciudad Base">Ciudad Base</div>
+        <div class="stat-card fade-up"><div class="stat-big">2</div><div class="stat-small">Salones Privados</div></div>
+        <div class="stat-card fade-up"><div class="stat-big">&#x1f37d;&#xfe0f;</div><div class="stat-small">Cocina Tradicional</div></div>
+        <div class="stat-card fade-up"><div class="stat-big">CDMX</div><div class="stat-small">Narvarte Oriente</div></div>
+        <div class="stat-card fade-up"><div class="stat-big">&#x1f4fa;</div><div class="stat-small">Soy tu Fan</div></div>
+        <div class="stat-card fade-up" style="background:var(--gold);border-color:var(--gold);padding:24px;">
+          <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#000;font-weight:500;margin-bottom:8px;">WhatsApp / Tel&#xe9;fono</div>
+          <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.3rem;color:#000;">55 3330-7505</div>
         </div>
       </div>
     </div>
   </div>
 
-  
   <footer>
     <div class="footer-logo">Cantina La Valenciana</div>
     <div class="footer-links">
       <a href="./index.html">Inicio</a>
-      <a href="./about.html">Sobre M&#xed;</a>
-      <a href="./tattoos.html">Tatuajes</a>
+      <a href="./about.html">Nuestra Historia</a>
+      <a href="./tattoos.html">Men&#xfa;</a>
       <a href="./booking.html">Reservaciones</a>
       <a href="https://www.instagram.com/cantina_lavalenciana" target="_blank" rel="noopener">Instagram</a>
-      
     </div>
-    <div class="footer-copy">&#xa9; 2026 Cantina La Valenciana</div>
+    <div class="footer-copy">&copy; 2026 Cantina La Valenciana &mdash; Narvarte, CDMX</div>
   </footer>
-  
   <script>
-    const LANG = { default: 'es', current: 'es' };
-    function toggleLang() {
-      LANG.current = LANG.current === 'es' ? 'en' : 'es';
-      document.querySelectorAll('[data-es][data-en]').forEach(el => {
-        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
-      });
-      document.querySelectorAll('[data-es-href][data-en-href]').forEach(el => {
-        el.setAttribute('href', el.getAttribute('data-' + LANG.current + '-href') || el.getAttribute('href'));
-      });
-    }
-    // Apply language on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('[data-es][data-en]').forEach(el => {
-        el.textContent = el.getAttribute('data-' + LANG.current) || el.textContent;
-      });
-    });
-
-    // Fade-up on scroll
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.12 });
